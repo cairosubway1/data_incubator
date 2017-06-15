@@ -1,10 +1,12 @@
 language: python
-
 python:
-
-  - "3.6"
-
-
-install: "pip install -r requirements.txt"
-
+- '3.6'
+install: pip install -r requirements.txt
 script: echo foo
+deploy:
+  provider: heroku
+  api_key:
+    secure: OrIoWNQrnnvHQqzud0mPa/W0T2ngPdLQSjdVotCBGLlTk58zSaKaG/32t22MyPreTMuiv0bbrkCqxfiRJoqoWnrCZfPxO4vLghB1XSHExTFQx0SkL29dgzyknNfad0udt2q874PxZBy0YWz+AnkE2zwqYvfNuD17TVBdLX/2J032eODxDjrcUOohbrsYAC0t6HfRO3IEKTO3Fnlsqv0MSZi9kV0E/1AmRv9gwqfo8nKBJ0stNmV590YXNAsEmAVAs+ysJYrgjrBE9Icycdvis4ChKTbvlP52UkESk/kfOZanarErb6zRKRhym9f5vgt2V1IOkQkJQdTDR4XZrL2OCnlIw7RL3dHjd+e2WkI/3e/kQ667ivnA7bPyi3wWmZHx7iuQZapNqGBEZoY2UT6cFbWNtNoeYBKc7wneHm7H5I7+zzo6OA8fMkd7doOTMhncVSTsIkLJ9styQoVZXzyXg7dVx5v5MrOp9DiE6gjTTGTokP4zfBBhErHpM8pFLd3NGQkMPIwGDOXsKYEjVrR+iOFqzXe1c9FZ6C+vRuJTVjUni2J19Seh1sfnkn1g/6yahiCE4azujfNTSociuWY9yHfaaPtjZOqNfbXtuFYo/mD7h+qgLJCTeOyEZpE5mggzDRcZiwLDrAhpYSRR8eT1P1BxK8Nqm+5xm3+6CMuhyYI=
+  app: incubator-data
+  on:
+    repo: cairosubway1/data_incubator
