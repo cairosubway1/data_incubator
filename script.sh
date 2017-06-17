@@ -1,7 +1,7 @@
 #!/bin/sh
 
 #Installs Heroku command line client
-wget -qO- https://cli-assets.heroku.com/install-ubuntu.sh | sh -y
+wget -qO- https://cli-assets.heroku.com/install-ubuntu.sh | sh
 
 #Installs dependencies for Travis CI command line client
 sudo apt-get install python-software-properties -y
