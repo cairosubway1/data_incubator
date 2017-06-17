@@ -8,7 +8,10 @@ sudo apt-get install python-software-properties -y
 sudo apt-add-repository ppa:brightbox/ruby-ng -y
 sudo apt-get update
 sudo apt-get install ruby2.1 ruby-switch -y
-sudo ruby-switch --set ruby2.1 -y
+sudo ruby-switch --set ruby2.1
+
+#Installs pip3
+sudo apt-get install python3-pip -y
 
 #Installs application dependencies
 pip3 install -r requirements.txt
