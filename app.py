@@ -11,6 +11,7 @@ def upload_photo():
 	photo = request.files['photo']
 	resp = app.make_response(photo.read())	
 	resp.mimetype = 'image/jpeg'
+	resp.headers['Content-Disposition'] = 'inline; filename=' + photo.filename
 	return resp
 	
 if __name__ == '__main__':
